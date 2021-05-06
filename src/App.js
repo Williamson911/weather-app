@@ -16,7 +16,7 @@ function App() {
     if (event.key === "Enter") {
       try {
         await axios
-        .get("${api.base}/weather?q=${query}&units=metric&APPID=${api.key}")
+        .get(`${api.base}/weather?q=${query}&units=metric&APPID=${api.key}`)
         .then((result)) => {
           setWeather(result.data);
           setQuery('');
