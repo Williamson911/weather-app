@@ -4,7 +4,7 @@ const key = process.env.API_KEY
 
 const api = {
     key: key,
-    base: "api.openweathermap.org/data/2.5/forecast"
+    base: "api.openweathermap.org/data/2.5"
 }
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
   const search = evt => {
     if (evt.key === "Enter") {
-      fetch(`${api.base}?q=${query}&units=metric&cnt=5&appid=${api.key}`)
+      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then(res => res.json())
         .then(result => {
           setWeather(result);
