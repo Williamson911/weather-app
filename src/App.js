@@ -12,10 +12,6 @@ function App() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
 
-  const refresh = () => {
-    window.location.reload();
-  };
-
   const search = async (event) => {
     if (event.key === "Enter") {
       try {
