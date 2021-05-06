@@ -4,7 +4,7 @@ const key = process.env.API_KEY
 
 const api = {
     key: key,
-    base: "api.openweathermap.org/data/2.5"
+    base: "api.openweathermap.org/data/2.5/forecast"
 }
 
 function App() {
